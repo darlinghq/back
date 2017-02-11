@@ -13,7 +13,7 @@
 
 
 /* Define to type of graphics context to build */
-#define BUILD_GRAPHICS GRAPHICS_cairo
+#define BUILD_GRAPHICS GRAPHICS_opal
 
 /* Define to type of window server to build */
 #define BUILD_SERVER SERVER_x11
