@@ -28,7 +28,7 @@ else(BITS EQUAL 64)
 endif(BITS EQUAL 64)
 
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/darling")
-SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE) 
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
@@ -54,8 +54,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../foundation/Headers)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../foundation/Headers)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../corefoundation/Headers)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../corefoundation/Headers)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../coregraphics/Headers)
-include_directories(${CMAKE_CURRENT_BINARY_DIR}/../../coregraphics/Headers)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libobjc2)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libdispatch)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../icu/icuSources/common)
@@ -188,23 +186,20 @@ set(appkit_back_SRCS
 	Source/x11/xdnd.c
 	Source/x11/xutil.c
 
-
-	Source/opal/../fontconfig/FCFaceInfo.m
-	Source/opal/../fontconfig/FCFontEnumerator.m
-	Source/opal/../fontconfig/FCFontInfo.m
-
-	Source/opal/OpalSurface.m
-	Source/opal/OpalFontInfo.m
-	Source/opal/OpalGState.m
-	Source/opal/OpalContext.m
-	Source/opal/OpalFontEnumerator.m
-	Source/opal/OpalFaceInfo.m
-	Source/opal/OpalPSSurface.m
-	Source/opal/OpalPDFSurface.m
-
-	#Source/cairo/XGCairoSurface.m
-	#Source/cairo/XGCairoXImageSurface.m
-	#Source/cairo/XGCairoModernSurface.m
+	Source/cairo/CairoSurface.m
+	Source/cairo/CairoFontInfo.m
+	Source/cairo/CairoGState.m
+	Source/cairo/CairoContext.m
+	Source/cairo/CairoFontEnumerator.m
+	Source/cairo/CairoFaceInfo.m
+	Source/cairo/CairoPSSurface.m
+	Source/cairo/CairoPDFSurface.m
+	Source/cairo/../fontconfig/FCFaceInfo.m
+	Source/cairo/../fontconfig/FCFontEnumerator.m
+	Source/cairo/../fontconfig/FCFontInfo.m
+	Source/cairo/XGCairoSurface.m
+	Source/cairo/XGCairoXImageSurface.m
+	Source/cairo/XGCairoModernSurface.m
 )
 
 set_source_files_properties(${appkit_back_SRCS} LANGUAGE C)
