@@ -28,7 +28,7 @@ else(BITS EQUAL 64)
 endif(BITS EQUAL 64)
 
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/darling")
-SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE) 
+SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
@@ -205,3 +205,5 @@ set(appkit_back_SRCS
 set_source_files_properties(${appkit_back_SRCS} LANGUAGE C)
 
 add_library(appkit-back OBJECT ${appkit_back_SRCS})
+
+install(DIRECTORY Fonts/Helvetica.nfont	DESTINATION libexec/darling/System/Library/Fonts)
